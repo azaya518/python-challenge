@@ -58,3 +58,8 @@ print("Li: " + str('{:.3f}'.format(round(Li_percent, 3))) + "% " + "(" + str(Li)
 print("O'Tooley: " + str('{:.3f}'.format(round(OTooley_percent, 3))) + "% " + " (" + str(OTooley) + ")")
 print("------------------------")
 print("Winner: " + str(candidate_list[Election_Analysis.index(max(Election_Analysis))]))
+
+pypoll_output = open("PyPoll/PyPoll_output.txt",'w')
+pypoll_output.write("Election Results\n------------------------\nTotal Votes: " + str(total_votes) + "\n------------------------\nKhan: " + str('{:.3f}'.format(round(Khan_percent, 3)))+ "% " + "(" + str(Khan) + ")\nCorrey: " + str('{:.3f}'.format(round(Correy_percent, 3)))+ "% " + "(" + str(Correy) + ")\nLi: " + str('{:.3f}'.format(round(Li_percent, 3))) + "% " + "(" + str(Li) + ")\nO'Tooley: " + str('{:.3f}'.format(round(OTooley_percent, 3))) + "% " + " (" + str(OTooley) +")\n------------------------\nWinner: " + str(candidate_list[Election_Analysis.index(max(Election_Analysis))]))
+
+pypoll_output.close()
